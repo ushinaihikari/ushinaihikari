@@ -1,0 +1,461 @@
+/* Main stylesheet for ish.app */
+body {
+    background-color: #161616;
+    color: #fff;
+    /* Noto Sans is Firefox default, looks better than sans-serif */
+    font-family: 'Ubuntu','Noto Sans',sans-serif;
+    text-align: center;
+    margin: 0;
+    font-size: 14pt;
+}
+
+h1, h2, p {
+    font-weight: 400;
+}
+
+a {
+    color: #85beff;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #818181;
+    width: 50%;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Notice */
+.banner {
+    justify-content: space-between;
+    background-color: #32a852;
+}
+
+.notice p {
+    padding: 0 0px 0 16px;
+}
+
+.notice a {
+    color: #fff;
+    padding: 0 10px 0 10px;
+    white-space: nowrap;
+}
+
+.notice a:hover {
+    text-decoration: underline;
+}
+
+nav {
+    display: inherit;
+    color: #4b4d5c;
+}
+
+nav p {
+    margin: 0;
+    color: #fff;
+}
+
+nav a {
+    border: solid rgba(255, 255, 255, 0.1);
+    border-width: 3px 0;
+    padding: 6px 8px 6px 8px;
+    width: 100px;
+    color: rgba(255, 255, 255, 0.1);
+    transition: background .1s ease-in-out, border-color .2s;
+    margin: 0 12px 0 12px;
+    font-size: 15pt;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    text-decoration: none;
+}
+
+footer a {
+    color: grey;
+}
+
+footer p {
+    font-size: 15pt;
+    padding: 8px;
+    margin: 0 0 0.5em 0;
+    color: darkgrey;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Contains entire front page */
+.front-container {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 70em;
+    justify-content: space-evenly;
+    flex-grow: 2;
+}
+
+/* The large iSH icon */
+.icon {
+    height: 190px;
+    width: 190px;
+    border-radius: 32px;
+    border: 2px solid #4b4d5c;
+}
+
+/* Fancy Get buttons */
+.actions {
+    align-items: center;
+    font-size: 20pt;
+    max-width: 300px;
+}
+
+.get {
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    border: 2px solid #4b4d5c;
+    background: #000;
+    width: 280px;
+    color: #4b4d5c; /* otherwise border flashes blue on load */
+    transition: border-color .15s ease-in-out;
+    padding: 0.4em;
+    margin-bottom: 6px;
+}
+
+.get img {
+    height: 40px;
+    width: 40px;
+    border-radius: 9px;
+}
+
+.get p {
+    text-align: center;
+    flex-grow: 1;
+    font-size: 15pt;
+    margin: 0;
+    color: #fff;
+}
+
+.get:hover {
+    border-color: #686a7d;
+    text-decoration: none;
+}
+
+/* Primary text on front page */
+.fronttext {
+    text-align: left;
+    flex-grow: 1;
+    margin: 0 2em 0 2em;
+}
+
+.fronttext h1 {
+    font-size: 36pt;
+    line-height: 48px;
+}
+
+.fronttext h1, .fronttext h2 {
+    margin: 10px 0 10px 0;
+}
+
+.iphone {
+    height: auto;
+    max-width: 100%;
+    max-height: 75vh;
+}
+
+.ipad {
+    height: auto;
+    width: 80%;
+}
+
+.downarrow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 64px;
+    width: 100%;
+}
+
+.downarrow svg {
+    fill: #fff;
+    width: 48px;
+    animation: bounce 2s ease-in-out 1.5s, fadeIn 1s ease-out;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    20% { transform: translateY(-12px); }
+    40% { transform: translateY(0px); }
+    55% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.home {
+    background: linear-gradient(170deg, #20233c, #0f1121);
+    height: 100vh;
+}
+
+.lightsec {
+    background-color: #0f0f0f;
+    color: #fff;
+    padding: 1px;
+}
+
+.expl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infobox {
+    width: 80%;
+    background-color: #262626;
+    color: #f1f1f1;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.75);
+    padding: 12px;
+    margin-bottom: 16px;
+}
+
+.infobox .meds,
+.infobox p {
+    margin: 4px;
+}
+
+.boxpict {
+    width: 100%;
+    height: auto;
+}
+
+/* "Info" and "Getting iSH" sections */
+#info h1, #get h1 {
+    font-size: 24pt;
+    margin: 12px;
+}
+
+.left {
+    left: 80px;
+}
+
+.right {
+    right: 80px;
+}
+
+.getcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.block {
+    display: flex;
+    width: 300px;
+    height: 260px;
+    background-color: #262626;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    display: inline;
+}
+
+.block img {
+    margin-top: 12px;
+}
+
+.actions svg {
+    width: 40px;
+    height: 40px;
+    color: #f1f1f1;
+    fill: currentColor;
+    transition: .4s transform;
+}
+
+.other {
+    font-size: 13pt;
+    margin: 12px;
+}
+
+.hoverscale {
+    width: 30%;
+    height: auto;
+    transition: .4s transform;
+    border-radius: 20px;
+}
+
+.hoverscale:hover,
+.block svg:hover {
+    transform: scale(1.1);
+}
+
+.bottomtext {
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 20px 0 20px;
+    max-width: 42em;
+}
+
+/* Dividers */
+.divider {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.midline {
+    border-left: 1px solid #616161;
+    height: 80px;
+    margin: 0 30px 0 30px;
+    display: inline-block;
+}
+
+.meds {
+    font-size: 16pt;
+}
+
+/* Mobile optimisations */
+@media only screen and (max-width: 750px) {
+    header { justify-content: space-around; }
+    .banner {
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+    }
+    .notice { margin-left: 0; }
+    nav a {
+        padding: 6px;
+        width: 80px;
+        margin: 6px;
+    }
+    .front-container {
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+    }
+    .icon {
+        height: 140px;
+        width: 140px;
+    }
+    .iphone { display: none; }
+    .fronttext {
+      flex-grow: 0;
+      text-align: center;
+      margin: 2em 0 0 0;
+    }
+    .photo {
+        max-width: 100%;
+    }
+    .whidden { display: none; }
+    .ipad {
+        width: 95%;
+        height: auto;
+    }
+    .block { margin: 6px 0 6px 0; }
+    .getcontainer { flex-direction: column; }
+    .expl { display: block; }
+}
+
+@media only screen and (max-height: 500px) {
+    .hhidden { display: none; }
+}
+
+@media only screen and (max-height: 600px) {
+    .downarrow { display: none; }
+}
+
+@media only screen and (max-width: 860px) {
+    .iphone { display: none; }
+}
+
+@media only screen and (max-width: 400px) { /* smol */
+    nav a {
+        padding: 2px 8px 2px 8px;
+        width: auto;
+        margin: 4px;
+        font-size: 13.5pt;
+    }
+}
+
+/* Light theme */
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+    a {
+        color: #2069bd;
+    }
+    .home {
+        color: #fff;
+    }
+    .lightsec {
+        background-color: #f1f1f1;
+        color: #161616;
+    }
+}
+
+/* AltStore page */
+.altcontainer {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    max-width: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    height: 100%;
+    background-color: #0f0f0f;
+}
+
+.step {
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    width: 275px;
+}
+
+.step h2 {
+    font-size: 22pt;
+    margin: 0;
+}
+
+.number {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 1em;
+}
